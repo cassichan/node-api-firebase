@@ -18,6 +18,10 @@ app.post("/add-one", (req, res) => {
     res.send("add this one as well")
 });
 
+app.get("/", (req, res) => {
+    res.send("sending all items")
+});
+
 //any request that comes in, send to express
 exports.api = functions.https.onRequest(app);
 
