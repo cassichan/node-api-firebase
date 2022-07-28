@@ -20,7 +20,16 @@ app.post("/add-one", (req, res) => {
 
 app.get("/", (req, res) => {
     res.send("sending all items")
-});
+
+
+
+
+
+
+app.delete("/delete-one", (req, res) => {
+    Array.splice(3,1)
+})
+
 
 //any request that comes in, send to express
 exports.api = functions.https.onRequest(app);
